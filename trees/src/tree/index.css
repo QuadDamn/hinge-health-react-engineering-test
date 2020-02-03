@@ -16,3 +16,32 @@
 .indent-third-child {
     text-indent: 90px;
 }
+
+ol {
+    counter-reset: item;
+    padding: 0;
+}
+
+li {
+    display: block
+}
+
+li:before {
+    content: counter(item) " ";
+    counter-increment: item
+}
+
+li li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+}
+
+li li li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+}
+
+li li li li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+}
