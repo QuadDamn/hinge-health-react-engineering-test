@@ -16,8 +16,8 @@ export default function TreeBranch({treeData, level}) {
         <ol>
             {treeData.map((branch, i) => {
                 return <div key={`level-${level}-${i}`}>
-                    <li className={(branch.name !== 'root') ? `indent-level-${level}-child` : ''}>
-                        {(branch.name !== 'root') ? addPeriods(branch.name) : branch.name}
+                    <li className={(level !== 0) ? `indent-level-${level}-child` : ''}>
+                        {(level !== 0) ? addPeriods(branch.name) : branch.name}
                         {hasChildren(branch) && <TreeBranch treeData={branch.children} level={level + 1}/>}
                     </li>
                 </div>
