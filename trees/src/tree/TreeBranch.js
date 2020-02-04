@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './TreeBranch.css';
 
 export default function TreeBranch({treeData, level}) {
     function hasChildren(branch) {
@@ -15,13 +15,13 @@ export default function TreeBranch({treeData, level}) {
     return (
         <ol>
             {treeData.map((branch, i) => {
-            return <div key={`level-${level}-${i}`}>
-                <li className={(branch.name !== 'root') ? `indent-level-${level}-child` : ''}>
-                    {addPeriods(branch.name)}
-                    {hasChildren(branch) && <TreeBranch treeData={branch.children} level={level + 1} />}
-                </li>
-            </div>
-        })}
+                return <div key={`level-${level}-${i}`}>
+                    <li className={(branch.name !== 'root') ? `indent-level-${level}-child` : ''}>
+                        {addPeriods(branch.name)}
+                        {hasChildren(branch) && <TreeBranch treeData={branch.children} level={level + 1}/>}
+                    </li>
+                </div>
+            })}
         </ol>
     );
 }

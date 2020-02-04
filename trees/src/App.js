@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import "./App.css";
-import Tree from "./tree";
+import Tree from "./tree/Tree";
 
 export default function App() {
   return (

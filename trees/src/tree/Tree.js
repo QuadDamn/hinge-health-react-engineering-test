@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './index.css'
-import axios from 'axios'
+import './Tree.css';
 import data from './data.json';
 import TreeBranch from "./TreeBranch";
 
@@ -9,7 +8,7 @@ export default function Tree() {
 
     return (
         <div className="tree">
-            <TreeBranch treeData={treeData} level={0} />
+            <TreeBranch treeData={treeData} level={0}/>
         </div>
     );
 }
