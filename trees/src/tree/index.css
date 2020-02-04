@@ -5,15 +5,15 @@
     font-family: monospace
 }
 
-.indent-first-child {
+.indent-level-1-child {
     text-indent: 30px;
 }
 
-.indent-second-child {
+.indent-level-2-child {
     text-indent: 60px;
 }
 
-.indent-third-child {
+.indent-level-3-child{
     text-indent: 90px;
 }
 
